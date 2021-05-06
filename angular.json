@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "virtual-scrolling"
+  "defaultProject": "virtual-scrolling",
+  "cli": {
+    "analytics": "5a92d2ba-e6ca-4a96-81d4-453dde097147"
+  }
 }
