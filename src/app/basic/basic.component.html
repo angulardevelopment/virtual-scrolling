@@ -1,5 +1,45 @@
-<cdk-virtual-scroll-viewport style="height: 500px" itemSize="100" >
-  <ng-container *cdkVirtualFor="let n of fixedSizeData">
-  <li class="list-item"> {{n}} </li>
-  </ng-container>
-  </cdk-virtual-scroll-viewport>
+<p>
+  The cdk-virtual-scroll-viewport displays large lists of elements performantly
+  by only rendering the items that fit on-screen. Loading hundreds of elements
+  can be slow in any browser; virtual scrolling enables a performant way to
+  simulate all items being rendered by making the height of the container
+  element the same as the height of total number of elements to be rendered, and
+  then only rendering the items in view
+</p>
+
+<p>itemSize - The size of the items in the list</p>
+
+<p>Basic example:</p>
+<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+  <div *cdkVirtualFor="let item of fixedSizeData" class="example-item">
+    {{ item }}
+  </div>
+</cdk-virtual-scroll-viewport>
+
+<ul>
+  <li>index The index of the item in the data source.</li>
+  <li>count The total number of items in the data source.</li>
+  <li>first Whether this is the first item in the data source.</li>
+  <li>last Whether this is the last item in the data source.</li>
+  <li>even Whether the index is even.</li>
+  <li>odd Whether the index is odd</li>
+</ul>
+
+<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+  <div
+    *cdkVirtualFor="
+      let item of fixedSizeData;
+      let index = index;
+      let count = count;
+      let first = first;
+      let last = last;
+      let even = even;
+      let odd = odd
+    "
+    class="example-item"
+  >
+    {{ item }} {{ index }} {{ count }}{{ first ? "Yes" : "No"
+    }}{{ last ? "Yes" : "No" }} {{ even ? "Yes" : "No"
+    }}{{ odd ? "Yes" : "No" }}
+  </div>
+</cdk-virtual-scroll-viewport>

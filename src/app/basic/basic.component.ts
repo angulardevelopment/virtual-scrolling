@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicComponent {
 
-  fixedSizeData;
+  fixedSizeData = Array.from({length: 100}).map((_, i) => `Item #${i}`);
   constructor(){
-  this.fixedSizeData = Array.from({length: 100}).map((_, i) => `Item #${i}`);
+
   }
 
 }
