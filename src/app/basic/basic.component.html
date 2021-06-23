@@ -17,13 +17,15 @@
 </cdk-virtual-scroll-viewport>
 
 <ul>
-  <li>index The index of the item in the data source.</li>
-  <li>count The total number of items in the data source.</li>
-  <li>first Whether this is the first item in the data source.</li>
-  <li>last Whether this is the last item in the data source.</li>
-  <li>even Whether the index is even.</li>
-  <li>odd Whether the index is odd</li>
+  <li>index- The index of the item in the data source.</li>
+  <li>count- The total number of items in the data source.</li>
+  <li>first- Whether this is the first item in the data source.</li>
+  <li>last- Whether this is the last item in the data source.</li>
+  <li>even- Whether the index is even.</li>
+  <li>odd- Whether the index is odd</li>
 </ul>
+
+<p>Example With some basic properties:</p>
 
 <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
   <div
@@ -38,8 +40,13 @@
     "
     class="example-item"
   >
-    {{ item }} {{ index }} {{ count }}{{ first ? "Yes" : "No"
-    }}{{ last ? "Yes" : "No" }} {{ even ? "Yes" : "No"
-    }}{{ odd ? "Yes" : "No" }}
+    {{ item }}
+    index {{ index }}
+    count {{ count }}
+    first {{ first ? "1st" : "No"}}
+    last {{ last ? "lst" : "No" }}
+    even {{ even ? "evenItem" : "No" }}
+    odd {{ odd ? "oddItem" : "No" }}
+
   </div>
 </cdk-virtual-scroll-viewport>
