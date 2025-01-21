@@ -41,12 +41,12 @@
     class="example-item"
   >
     {{ item }}
-    index {{ index }}
-    count {{ count }}
-    first {{ first ? "1st" : "No"}}
-    last {{ last ? "lst" : "No" }}
-    even {{ even ? "evenItem" : "No" }}
-    odd {{ odd ? "oddItem" : "No" }}
+index <span class="index">{{ index }}</span>
+count <span class="count">{{ count }}</span>
+first <span class="first">{{ first ? "yes" : "No" }}</span>
+last <span class="last">{{ last ? "yes" : "No" }}</span>
+even <span class="even">{{ even ? "evenItem" : "oddItem" }}</span>
+odd <span class="odd">{{ odd ? "oddItem" : "evenItem" }}</span>
 
   </div>
 </cdk-virtual-scroll-viewport>
