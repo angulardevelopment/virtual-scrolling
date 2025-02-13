@@ -16,7 +16,8 @@ export class ScrollComponent implements OnInit {
    goUp = () => {
     const id = this.notes.nativeElement;
     // const id = document.getElementById("notes");
-    var maxScrollTop = id.scrollHeight - id.clientHeight;
+    // var maxScrollTop = id.scrollHeight - id.clientHeight;
+    console.log(id,id.scrollTop, 'elem');
     if (id.scrollTop !== 0) {
       id.scrollTo({
         top: id.scrollTop - 10,
@@ -28,7 +29,9 @@ export class ScrollComponent implements OnInit {
 
   goDown = () => {
     const id = this.notes.nativeElement;
-    var maxScrollDown = id.scrollHeight - id.clientHeight;
+    // var maxScrollDown = id.scrollHeight - id.clientHeight;
+    console.log(id,id.scrollTop, 'goDown elem');
+
     id.scrollTo({
       top: id.scrollTop + 10,
       left: 0,

@@ -12,10 +12,23 @@
 
 <p>itemSize - The size of the items in the list</p>
 
-<p>Basic example:</p>
+<p>Example With some basic properties:</p>
 <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
-  <div *cdkVirtualFor="let item of fixedSizeData" class="example-item">
+  <div *cdkVirtualFor="let item of fixedSizeData
+  let index = index;
+  let count = count;
+  let first = first;
+  let last = last;
+  let even = even;
+  let odd = odd"
+   class="example-item">
     {{ item }}
+    index <span class="index">{{ index }}</span>
+count <span class="count">{{ count }}</span>
+first <span class="first">{{ first ? "yes" : "No" }}</span>
+last <span class="last">{{ last ? "yes" : "No" }}</span>
+even <span class="even">{{ even ? "evenItem" : "oddItem" }}</span>
+odd <span class="odd">{{ odd ? "oddItem" : "evenItem" }}</span>
   </div>
 </cdk-virtual-scroll-viewport>
 
@@ -29,28 +42,3 @@
   <li>odd- Whether the index is odd</li>
 </ul>
 
-<p>Example With some basic properties:</p>
-
-<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
-  <div
-    *cdkVirtualFor="
-      let item of fixedSizeData;
-      let index = index;
-      let count = count;
-      let first = first;
-      let last = last;
-      let even = even;
-      let odd = odd
-    "
-    class="example-item"
-  >
-    {{ item }}
-index <span class="index">{{ index }}</span>
-count <span class="count">{{ count }}</span>
-first <span class="first">{{ first ? "yes" : "No" }}</span>
-last <span class="last">{{ last ? "yes" : "No" }}</span>
-even <span class="even">{{ even ? "evenItem" : "oddItem" }}</span>
-odd <span class="odd">{{ odd ? "oddItem" : "evenItem" }}</span>
-
-  </div>
-</cdk-virtual-scroll-viewport>

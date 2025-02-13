@@ -10,7 +10,7 @@ export class BasicComponent {
   fixedSizeData = Array.from({length: 100}).map((_, i) => `Item #${i}`);
 
   constructor(){
-
+console.log(this)
   }
 
 }
